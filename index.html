@@ -10,22 +10,6 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const music = document.getElementById("bgMusic");
-  const btn = document.getElementById("playBtn");
-
-  // En PC intentará sonar sola
-  window.addEventListener("load", () => {
-    music.play().catch(()=>{}); // si falla (ej. en móvil) no rompe nada
-  });
-
-  // En celular → con botón
-  btn.addEventListener("click", () => {
-    music.play();
-    btn.style.display = "none"; // oculta el botón después
-  });
-</script>
-
 <body>
   <!-- estrellas -->
   <canvas id="starsCanvas" class="stars-canvas"></canvas>
@@ -82,28 +66,6 @@
 
   <!-- música -->
   <audio id="bgAudio" src="cancion.mp3" autoplay loop preload="auto" playsinline></audio>
-  <!-- Música de fondo -->
-<audio id="bgMusic" loop>
-  <source src="cancion.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Botón para activar música en celular -->
-<button id="playBtn" style="
-  position:fixed;
-  bottom:20px; right:20px;
-  padding:10px 14px;
-  border:none;
-  border-radius:12px;
-  background:#ff6b8a;
-  color:#fff;
-  font-size:16px;
-  box-shadow:0 6px 20px rgba(255,107,138,0.3);
-  cursor:pointer;
-  z-index:999;
-">
- 🎶 Activar música
-</button>
-
 
   <script src="script.js"></script>
 </body>
