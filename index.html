@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Allison — De Josep</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- estrellas -->
+  <canvas id="starsCanvas" class="stars-canvas"></canvas>
+
+  <!-- corazones flotantes -->
+  <div id="heartsLayer" class="hearts-layer"></div>
+
+
+  <!-- encabezado -->
+  <header class="header">
+    <h1 class="title">Para Allison, el amor de mi vida</h1>
+    <p class="subtitle">Espero te guste con mucho amor de tu negrito</p>
+  </header>
+
+  <!-- galería de fotos -->
+  <section class="gallery">
+    <img src="fotos/foto1.jpg" alt="foto1" class="photo">
+    <img src="fotos/foto2.jpg" alt="foto2" class="photo">
+    <img src="fotos/foto3.jpg" alt="foto3" class="photo">
+    <img src="fotos/foto4.jpg" alt="foto4" class="photo">
+  </section>
+
+  <!-- Juego -->
+  <section class="game-section">
+    <h2 class="game-title">🎮 Nuestro Agua y Fuego</h2>
+    <div class="game-wrap">
+      <canvas id="gameCanvas" width="320" height="480"></canvas>
+
+      <!-- Mensaje del juego (overlay encima del canvas) -->
+      <div id="gameMessage" class="game-message" style="display:none"></div>
+
+      <!-- controles táctiles -->
+      <div class="touch-controls" id="touchControls">
+        <button class="ctl ctl-up" data-dir="up">⬆️</button>
+        <div style="display:flex;justify-content:center;gap:8px;margin-top:8px">
+          <button class="ctl ctl-left" data-dir="left">⬅️</button>
+          <button class="ctl ctl-down" data-dir="down">⬇️</button>
+          <button class="ctl ctl-right" data-dir="right">➡️</button>
+        </div>
+      </div>
+    </div>
+    <p class="tip">Guía el 💙 hasta el ❤️. Si chocas con una estrella, inténtalo otra vez ✨</p>
+  </section>
+
+  <!-- Mensaje secreto -->
+  <section class="secret-section">
+    <h2>🔐 Descubre la clave para ver el mensajito</h2>
+    <div class="secret-controls">
+      <input id="claveInput" type="password" placeholder="Escribe la clave..." autocomplete="off">
+      <button id="verBtn">Ver Mensaje</button>
+    </div>
+    <div id="loveCard" class="love-card" aria-live="polite" style="display:none"></div>
+  </section>
+
+  <!-- música -->
+  <audio id="bgAudio" src="cancion.mp3" autoplay loop preload="auto" playsinline></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
